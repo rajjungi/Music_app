@@ -49,7 +49,7 @@ function App() {
 
   const musicAPI = [
     {
-      songName: "AURORA",
+      songName: "AURORaA",
       songArtist: "Runaway",
       songSrc: "./songs/AURORA - Runaway (Lyrics).mp3",
       songAvatar: "./Images/aurora.jpg",
@@ -148,7 +148,7 @@ function App() {
   };
 
   const vidArray = [
-    "./Videos/video1.mp4",
+    ".//Videos/video1.mp4",
     ".//Videos/video2.mp4",
     ".//Videos/video3.mp4",
     ".//Videos/video4.mp4",
