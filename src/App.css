@@ -1,38 +1,132 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+:root {
+  --mainColor: #212121;
+  --mainlightColor: rgba(157, 216, 226, 0.5);
+  --mainDimColor: rgb(255, 250, 250);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.container {
   min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--mainColor);
+  font-family: poppins;
+}
+
+.backgroundVideo {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  filter: saturate(2.5);
+}
+
+.music-Container {
+  width: 350px;
+  padding: 35px 40px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  text-align: center;
+  border-radius: 36px;
+  border-radius: 16px;
+  /* From https://css.glass */
+  background: rgba(175, 156, 156, 0.31);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.4px);
+  -webkit-backdrop-filter: blur(7.4px);
+  font-weight: 600;
 }
 
-.App-link {
-  color: #61dafb;
+#songAvatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 18px 0;
+  position: relative;
+  animation: animateAvatar 5s linear infinite;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes animateAvatar {
+  0%,
+  100% {
+    transform: scale(1);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: scale(1.3);
   }
+}
+
+.musicTimerDiv {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-weight: 600;
+}
+
+.musicProgressBar {
+  width: 100%;
+  margin-bottom: 16px;
+  height: 10px;
+  border-radius: 5px;
+  outline: none;
+  filter: hue-rotate(20deg);
+}
+
+.playBtn {
+  font-size: 32px;
+  margin: 8px 10px;
+  color: var(--mainColor);
+  cursor: pointer;
+  font-weight: 400;
+}
+.musicControler {
+  cursor: pointer;
+  font-size: 28px;
+  color: var(--mainColor);
+}
+
+.changeBackBtn {
+  width: 25%;
+  height: 36px;
+  background-color: rgba(160, 209, 247, 0.573);
+  position: absolute;
+  border-radius: 25px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  transition: 0.3s;
+  color: rgb(0, 0, 0);
+  padding: 30px 0 0 0;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 30px 0 0 0;
+  text-align: center;
+}
+.changeBackBtn:hover {
+  height: 30px;
+  color: rgb(255, 255, 255);
+}
+
+.objectFitCover {
+  object-fit: cover;
+}
+
+.objectFitContain {
+  object-fit: contain;
 }
